@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="InfoSubSys_idea:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/InfoSubSys_idea_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="InfoSubSys_idea" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="InfoSubSys_idea/web/Web" />
+    </root>
+  </artifact>
+</component>
