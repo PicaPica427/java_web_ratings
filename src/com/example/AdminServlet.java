@@ -41,10 +41,6 @@ public class AdminServlet extends HttpServlet {
                 System.out.println(table+ " " + action);
                 handleList(request, response, table);
             }
-//            } else if ("edit".equals(action)) {
-//                // 显示编辑表单
-//                handleEditForm(request, response, table);
-//            }
         } catch (SQLException e) {
             throw new ServletException("Database operation failed", e);
         }
@@ -78,8 +74,8 @@ public class AdminServlet extends HttpServlet {
                 default:
                     throw new ServletException("Invalid action: " + action);
             }
-            response.sendRedirect(request.getContextPath() + "/admin?table=" + table + "&action=list");
-//            request.getRequestDispatcher("/admin.jsp").forward(request, response);
+//            response.sendRedirect(request.getContextPath() + "/admin?table=" + table + "&action=list");
+            request.getRequestDispatcher("/admin?table=" + table + "&action=list").forward(request, response);
         } catch (SQLException | NumberFormatException e) {
             throw new ServletException("Database operation failed", e);
         }
